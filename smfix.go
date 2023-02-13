@@ -173,13 +173,13 @@ func fix() {
 	sliMaxY, _ = strconv.ParseFloat(getProperty(gcodes, "max_y"), 32)
 	sliMaxZ, _ = strconv.ParseFloat(getProperty(gcodes, "max_z"), 32)
 
-	sliTemp = split(getProperty(gcodes, "temperature"))
-	sliFirstTemp = split(getProperty(gcodes, "first_layer_temperature"))
+	sliTemp = split(getProperty(gcodes, "nozzle_temperature"))
+	sliFirstTemp = split(getProperty(gcodes, "nozzle_temperature"))
 	sliFilamentTypes = split(getProperty(gcodes, "filament_type"))
-	sliNozzleDiameters = split(getProperty(gcodes, "nozzle_diameter"))
-	sliFirstLayerTemperature = split(getProperty(gcodes, "first_layer_temperature"))
-	sliFirstBedTemp = split(getProperty(gcodes, "first_layer_bed_temperature"))
-	sliBedTemperature = split(getProperty(gcodes, "bed_temperature"))
+	sliNozzleDiameters = split("0.4,0.4")
+	sliFirstLayerTemperature = split(getProperty(gcodes, "nozzle_temperature_initial_layer"))
+	sliFirstBedTemp = split(getProperty(gcodes, "hot_plate_temp_initial_layer"))
+	sliBedTemperature = split(getProperty(gcodes, "hot_plate_temp"))
 
 	if extL || extR ||
 		// settings: Printer Settings - Notes - add line(PRINTER_GCODE_V1)
