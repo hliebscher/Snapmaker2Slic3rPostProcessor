@@ -1,4 +1,4 @@
-PROJNAME = smfix
+PROJNAME = smfix_bs
 LDFLAGS = -w -s
 CMD = go build -trimpath -ldflags="$(LDFLAGS)"
 DIST = dist/
